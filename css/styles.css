@@ -68,7 +68,7 @@
     margin: 0;
     padding: 0;
     font: inherit;
-  }
+}
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -92,11 +92,6 @@ body {
 }
 
 /* --- primitives --- */
-
-* {
-  mix-blend-mode: screen;
-  transition: opacity 0.4s ease;
-}
 
 p {
   font-family: var(--main-ff);
@@ -133,17 +128,23 @@ h3 {
 
 .R {
   position: relative;
+  mix-blend-mode: screen;
   color: var(--R-clr);
+  transition: opacity 0.4s ease, top 0.4s ease;
 }
 
 .G {
   position: relative;
+  mix-blend-mode: screen;
   color: var(--G-clr);
+  transition: opacity 0.4s ease, top 0.4s ease;
 }
 
 .B {
   position: relative;
+  mix-blend-mode: screen;
   color: var(--B-clr);
+  transition: opacity 0.4s ease, top 0.4s ease;
 }
 
 .sidenav {
@@ -174,7 +175,7 @@ h3 {
   height: 40px;
   width: 10px;
   border-radius: 3px;
-  outline-style: solid;
+  border-style: solid;
   background-color: var(--white-clr);
   transition: background-color 0.4s ease;
 }
@@ -197,7 +198,7 @@ h3 {
 
 #R_button{
   background-color: var(--R-clr);
-  outline-color: var(--R-clr);
+  border-color: var(--R-clr);
 }
 
 #R_button.clicked {
@@ -206,7 +207,7 @@ h3 {
 
 #G_button{
   background-color: var(--G-clr);
-  outline-color: var(--G-clr);
+  border-color: var(--G-clr);
 }
 
 #G_button.clicked {
@@ -216,7 +217,7 @@ h3 {
 #B_button{
 
   background-color: var(--B-clr);
-  outline-color: var(--B-clr);
+  border-color: var(--B-clr);
 }
 
 #B_button.clicked {
@@ -293,6 +294,10 @@ h3 {
 
 .txt_r {
   grid-area: R;
+}
+
+.txt_width {
+  max-width: 400px;
 }
 
 .rec {

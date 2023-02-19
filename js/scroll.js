@@ -1,6 +1,6 @@
 // control parameters //
-let leg_factor = 0.1;
-let threshold = 40;
+let leg_factor = 0.4;
+let threshold = 0;
 let tickTimeout_time = 150;
 
 // general parameters //
@@ -14,6 +14,8 @@ let leg_G = 0;
 let leg_B = 0;
 let tickTimeout = null;
 let ticking = false;
+
+const a2_title = document.querySelector('.a2_title');
 
 const R = document.querySelectorAll(".R");
 const G = document.querySelectorAll(".G");
@@ -51,4 +53,7 @@ document.addEventListener("scroll", (event) => {
     });
     ticking = true;
   }
+
+  console.log('lastKnownScrollPosition: '+lastKnownScrollPosition);
+  console.log('a2_title: ' + a2_title.scrollTop);
 });
