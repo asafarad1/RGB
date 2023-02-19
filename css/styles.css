@@ -181,7 +181,10 @@ h3 {
 
 
 #a1_button{
-  /* margin-bottom: auto; */
+}
+
+.in_a1 {
+  margin-bottom: auto;
 }
 
 #a2_button{
