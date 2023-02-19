@@ -161,20 +161,17 @@ h3 {
 
 .R {
   position: relative;
-  mix-blend-mode: screen;
   /* color: var(--R-clr); */
   color: yellow;
 }
 
 .G {
   position: relative;
-  mix-blend-mode: screen;
   color: var(--G-clr);
 }
 
 .B {
   position: relative;
-  mix-blend-mode: screen;
   color: var(--B-clr);
 }
 
