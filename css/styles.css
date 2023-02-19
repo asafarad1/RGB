@@ -87,7 +87,7 @@ body {
   min-height: 100vh;
   padding: 0 10vw 0 10vw;
   /* background-color: var(--black-clr); */
-  background-color: #fff;
+  background-color: var(--TEST);
 }
 
 /* --- primitives --- */
@@ -150,7 +150,6 @@ h3 {
 }
 
 .sidenav .article_button {
-  background-color: var(--TEST);
   display: block;
   height: 40px;
   width: 10px;
@@ -163,7 +162,8 @@ h3 {
 .R {
   position: relative;
   mix-blend-mode: screen;
-  color: var(--R-clr);
+  /* color: var(--R-clr); */
+  color: yellow;
 }
 
 .G {
