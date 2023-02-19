@@ -81,16 +81,14 @@ img, picture, svg, video {
 
 html {
   color-scheme: dark light;
-  /* background-color: var(--black-clr); */
-  background-color: #fff;
+  background-color: var(--black-clr);
 }
 
 body {
   height: auto;
   min-height: 100vh;
   padding: 0 10vw 0 10vw;
-  /* background-color: var(--black-clr); */
-  background-color: #fff;;
+  background-color: var(--black-clr);
 }
 
 /* --- primitives --- */
@@ -225,9 +223,8 @@ div.grid_one {
 /* --- id --- */
 
 #R_button{
-  /* background-color: var(--R-clr); */
+  background-color: var(--R-clr);
   outline-color: var(--R-clr);
-  background-color: yellow;
 }
 
 #R_button.clicked {
