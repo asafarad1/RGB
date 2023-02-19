@@ -86,7 +86,8 @@ html {
 body {
   min-height: 100vh;
   padding: 0 10vw 0 10vw;
-  background-color: var(--black-clr);
+  /* background-color: var(--black-clr); */
+  background-color: #fff;
 }
 
 /* --- primitives --- */
