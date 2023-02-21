@@ -139,7 +139,7 @@ h3 {
   position: relative;
   mix-blend-mode: screen;
   color: var(--R-clr);
-  transition: opacity 0.4s ease, top 0.41s ease;
+  transition: opacity 0.4s ease, top 0.41s ease-out;
 }
 
 .G {
@@ -192,14 +192,6 @@ h3 {
 
 .in_a1 {
   margin-bottom: auto;
-}
-
-#a2_button{
-
-}
-
-#a3_button{
-  /* margin-top: auto; */
 }
 
 #R_button{
@@ -260,16 +252,15 @@ h3 {
   justify-content: normal;
 }
 
-#a1 {
-  margin-top: 40vh;
+.a_header {
+  margin-top: 80vh;
+  padding-top: 10vh;
+  transition: opacity 3s ease;
+  opacity: 0;
 }
 
-#a2 {
-  margin-top: 40vh;
-}
-
-#a3 {
-  margin-top: 40vh;
+.a_header.active {
+  opacity: 1;
 }
 
 .a_title_R {
