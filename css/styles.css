@@ -89,6 +89,7 @@ body {
   min-height: 100vh;
   padding: 0 10vw 0 10vw;
   background-color: var(--black-clr);
+  overflow: scroll;
 }
 
 /* --- primitives --- */
@@ -104,11 +105,19 @@ p.indent {
   text-indent: 80px;
 }
 
-h2 {
+h1 {
   font-family: var(--main-ff);
   font-weight: var(--main-fw);
   font-size: 20px;
   max-width: 400px;
+}
+
+h2 {
+  font-family: var(--main-ff);
+  font-weight: var(--main-fw);
+  line-height: 50px;
+  font-size: 50px;
+  max-width: 55vw;
 }
 
 h3 {
@@ -130,21 +139,21 @@ h3 {
   position: relative;
   mix-blend-mode: screen;
   color: var(--R-clr);
-  transition: opacity 0.4s ease, top 0.4s ease;
+  transition: opacity 0.4s ease, top 0.41s ease;
 }
 
 .G {
   position: relative;
   mix-blend-mode: screen;
   color: var(--G-clr);
-  transition: opacity 0.4s ease, top 0.4s ease;
+  transition: opacity 0.4s ease, top 0.41s ease;
 }
 
 .B {
   position: relative;
   mix-blend-mode: screen;
   color: var(--B-clr);
-  transition: opacity 0.4s ease, top 0.4s ease;
+  transition: opacity 0.4s ease, top 0.41s ease;
 }
 
 .sidenav {
@@ -156,18 +165,19 @@ h3 {
   height: 100vh;
   width: 10vh;
   justify-content: space-between;
+  align-items: center;
   z-index: 1;
   top: 0;
 }
 
-#sidenav_L {
-  justify-content: flex-start;
-  left: 5vh;
+#sidenav_l {
+  justify-content: space-between;
+  left: 0vh;
 }
 
-#sidenav_R {
+#sidenav_r {
   justify-content: space-between;
-  right: 5vh;
+  right: 0vh;
 }
 
 .sidenav .article_button {
@@ -178,10 +188,6 @@ h3 {
   border-style: solid;
   background-color: var(--white-clr);
   transition: background-color 0.4s ease;
-}
-
-
-#a1_button{
 }
 
 .in_a1 {
@@ -227,6 +233,7 @@ h3 {
 .grid {
   display: grid;
   align-items: stretch;
+  justify-items: center;
   margin: 7vh 5vw 0 0;
   column-gap: 5vw;
   width: auto;
@@ -237,14 +244,32 @@ h3 {
 .grid_one {
   display: grid;
   align-items: stretch;
-  margin: 7vh 5vw 0 0;
+  justify-items: center;
+  justify-content: space-evenly;
+  margin: 7vh 0 0 0;
   width: auto;
   grid-template-areas: "L";
 }
 
-.a_title_container {
-  margin-top: 20vh;
-  margin-bottom: 10vh;
+.site_header {
+  margin: 10vh 0 55vh 0;
+}
+
+.img_science {
+  justify-items: normal;
+  justify-content: normal;
+}
+
+#a1 {
+  margin-top: 40vh;
+}
+
+#a2 {
+  margin-top: 40vh;
+}
+
+#a3 {
+  margin-top: 40vh;
 }
 
 .a_title_R {
@@ -270,6 +295,11 @@ h3 {
 
 .img_r {
   grid-area: R;
+}
+
+.img_circle {
+  max-width: none;
+  width: 50vw;
 }
 
 .add_capction {

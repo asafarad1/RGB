@@ -1,3 +1,5 @@
+// RGB buttons //
+
 document.getElementById('R_button').addEventListener("click", function() {
     this.classList.toggle('clicked');
     R.forEach((userItem) => {
@@ -17,4 +19,11 @@ document.getElementById('B_button').addEventListener("click", function() {
     B.forEach((userItem) => {
         userItem.classList.toggle('channelSwitch');
       });
+})
+
+// article buttons //
+
+document.getElementById('a1_button').addEventListener("click", function() {
+  this.classList.toggle('clicked');
+  
 })

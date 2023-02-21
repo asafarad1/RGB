@@ -1,5 +1,6 @@
+// | channel delay | //
 // control parameters //
-let leg_factor = 0.4;
+let leg_factor = 0.2;
 let threshold = 0;
 let tickTimeout_time = 150;
 
@@ -15,6 +16,8 @@ let leg_B = 0;
 let tickTimeout = null;
 let ticking = false;
 
+// | trigger on scroll | //
+// general parameters //
 const a2_title = document.querySelector('.a2_title');
 
 const R = document.querySelectorAll(".R");
@@ -37,6 +40,7 @@ function channel_leg(scrollDiff) {
 }
 
 document.addEventListener("scroll", (event) => {
+  // | channel delay | //
   diff = window.scrollY - lastKnownScrollPosition;
   lastKnownScrollPosition = window.scrollY;
 
@@ -54,6 +58,7 @@ document.addEventListener("scroll", (event) => {
     ticking = true;
   }
 
-  console.log('lastKnownScrollPosition: '+lastKnownScrollPosition);
+  // | trigger on scroll | //
+  console.log('lastKnownScrollPosition: ' + lastKnownScrollPosition);
   console.log('a2_title: ' + a2_title.scrollTop);
 });
