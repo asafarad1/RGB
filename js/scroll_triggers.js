@@ -1,8 +1,13 @@
-function scrollTrigger(a_header, options = {}){
-    let els = document.querySelectorAll(a_header)
+// general parameters //
+const sidenav_l = document.getElementById('sidenav_l')
+const a1_button = document.getElementById('a1_button')
+const a2_button = document.getElementById('a2_button')
+const a3_button = document.getElementById('a3_button')
+
+function scrollTrigger(selector, options = {}){
+    let els = document.querySelectorAll(selector)
     els = Array.from(els)
     els.forEach(el => {
-      console.log('in addObserver()')
       addObserver(el, options)
     })
   }
@@ -16,13 +21,28 @@ function scrollTrigger(a_header, options = {}){
         }
         return
     }
-    let observer = new IntersectionObserver((entries, observer) => { //this takes a callback function which receives two arguments: the elemts list and the observer instance
+    let observer = new IntersectionObserver((entries, observer) => { 
         entries.forEach(entry => {
             if(entry.isIntersecting){
                 if(options.cb){
                     options.cb(el)
                 }else{
                     entry.target.classList.add('active')
+                    if(el.id == 'a1'){
+                        a1_button.style.marginBottom = "30vh";
+                        a2_button.style.marginBottom = "0vh";
+                        a3_button.style.marginBottom = "0vh";
+                    }
+                    if(el.id == 'a2'){
+                        a1_button.style.marginBottom = "0vh";
+                        a2_button.style.marginBottom = "30vh";
+                        a3_button.style.marginBottom = "0vh";
+                    }
+                    if(el.id == 'a3'){
+                        a1_button.style.marginBottom = "0vh";
+                        a2_button.style.marginBottom = "0vh";
+                        a3_button.style.marginBottom = "30vh";
+                    }
                 }
                 observer.unobserve(entry.target)
             }
@@ -30,19 +50,4 @@ function scrollTrigger(a_header, options = {}){
     }, options)
     observer.observe(el)
   }
-  // Example usages:
   scrollTrigger('.a_header')
-  
-  // scrollTrigger('.scroll-reveal', {
-  //   rootMargin: '-200px',
-  // })
-  
-  // scrollTrigger('.loader', {
-  //   rootMargin: '-200px',
-  //   cb: function(el){
-  //       el.innerText = 'Loading...'
-  //       setTimeout(() => {
-  //           el.innerText = 'Task Complete!'
-  //       }, 1000)
-  //   }
-  // })

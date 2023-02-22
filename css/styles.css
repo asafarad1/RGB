@@ -171,12 +171,10 @@ h3 {
 }
 
 #sidenav_l {
-  justify-content: space-between;
   left: 0vh;
 }
 
 #sidenav_r {
-  justify-content: space-between;
   right: 0vh;
 }
 
@@ -186,8 +184,9 @@ h3 {
   width: 10px;
   border-radius: 3px;
   border-style: solid;
+  border-color: var(--white-clr);
   background-color: var(--white-clr);
-  transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease, margin-bottom 1s ease;
 }
 
 .in_a1 {
@@ -255,7 +254,7 @@ h3 {
 .a_header {
   margin-top: 80vh;
   padding-top: 10vh;
-  transition: opacity 3s ease;
+  transition: opacity 2s ease;
   opacity: 0;
 }
 
@@ -438,5 +437,13 @@ h3 {
   
   #rec_B {
     margin-left: 0;
+  }
+
+  #sidenav_l {
+    left: -2vh;
+  }
+  
+  #sidenav_r {
+    right: -2vh;
   }
 }
