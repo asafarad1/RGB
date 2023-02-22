@@ -82,6 +82,8 @@ img, picture, svg, video {
 html {
   color-scheme: dark light;
   background-color: var(--black-clr);
+  scroll-behavior: smooth;
+  overflow: scroll;
 }
 
 body {
@@ -89,6 +91,8 @@ body {
   min-height: 100vh;
   padding: 0 10vw 0 10vw;
   background-color: var(--black-clr);
+  overflow: scroll;
+  scroll-behavior: smooth;
   overflow: scroll;
 }
 
@@ -324,6 +328,12 @@ h3 {
   height: 40px;
 }
 
+.footer {
+  margin-top: 30vh;
+  margin-bottom: 5vh;
+  align-items: stretch
+}
+
 /* --- id --- */
 
 #rec_gradient_bw_R {
@@ -445,5 +455,9 @@ h3 {
   
   #sidenav_r {
     right: -2vh;
+  }
+
+  h2 {
+    max-width: 80vw;
   }
 }
