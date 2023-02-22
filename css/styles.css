@@ -229,7 +229,7 @@ h3 {
   display: grid;
   align-items: stretch;
   justify-items: center;
-  margin: 7vh 0 0 0;
+  margin: 7vh 5vw 0 5vw;
   column-gap: 5vw;
   width: auto;
   grid-template-columns: 40% 60%;
@@ -241,7 +241,7 @@ h3 {
   align-items: stretch;
   justify-items: center;
   justify-content: space-evenly;
-  margin: 7vh 0 0 0;
+  margin: 7vh 5vw 0 5vw;
   width: auto;
   grid-template-areas: "L";
 }
@@ -360,6 +360,7 @@ h3 {
 
 #rec_R {
   background-color: var(--R-clr);
+  margin-left: 5vw;
 }
 
 #rec_R_B {
@@ -369,19 +370,24 @@ h3 {
 
 #rec_B {
   background-color: var(--B-clr);
-  margin-left: 5vw;
+  /* margin-left: 5vw; */
+}  
+
+#rec_B2 {
+  background-color: var(--B-clr);
+  /* margin-left: 5vw; */
 }
 
 #rec_gradient_R {
-  background-image: linear-gradient(to right, var(--black-clr) , var(--R-clr));
+  background-image: linear-gradient(to right, var(--R-clr) , var(--black-clr));
 }
 
 #rec_gradient_R_B {
-  background-image: linear-gradient(to right, rgb(60,0,0) , var(--black-clr));
+  background-image: linear-gradient(to right, var(--black-clr) , rgb(60,0,0));
 }
 
 #rec_gradient_B {
-  background-image: linear-gradient(to right, var(--B-clr) , var(--black-clr));
+  background-image: linear-gradient(to right,var(--black-clr)  , var(--B-clr));
 }
 
 #rec_gradient_borders {
@@ -389,17 +395,17 @@ h3 {
 }
 
 .border_R {
-  width: 77%;
+  width: 33%;
   box-shadow: -2px 0px 0px 0px var(--R-clr);
 }
 
 .border_G {
-  width: 77%;
+  width: 33%;
   box-shadow: -2px 0px 0px 0px var(--G-clr);
 }
 
 .border_B {
-  width: 77%;
+  width: 33%;
   box-shadow: -2px 0px 0px 0px var(--B-clr);
 }
 
@@ -415,11 +421,7 @@ h3 {
     margin: 5vh 4vw 0 7vw;
   }
 
-  #rec_R_B {
-    margin-left: 2vw;
-  }
-  
-  #rec_B {
+  #rec_R {
     margin-left: 2vw;
   }
 }
@@ -434,11 +436,7 @@ h3 {
     margin: 2vh 2vw 0 2vw;
   }
   
-  #rec_R_B {
-    margin-left: 1vw;
-  }
-  
-  #rec_B {
+  #rec_R {
     margin-left: 1vw;
   }
 }
@@ -451,11 +449,7 @@ h3 {
     grid-template-columns: auto;
   }
 
-  #rec_R_B {
-    margin-left: 0;
-  }
-  
-  #rec_B {
+  #rec_R {
     margin-left: 0;
   }
 
