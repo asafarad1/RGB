@@ -291,9 +291,19 @@ h3 {
   grid-area: R;
 }
 
+/* @keyframes pop_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+
 .img_circle {
   max-width: none;
   width: 50vw;
+  /* transition: 10s ease-out 10s 10 pop_in; */
 }
 
 .add_capction {
