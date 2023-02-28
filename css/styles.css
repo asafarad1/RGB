@@ -96,13 +96,30 @@ body {
   overflow: scroll;
 }
 
-body {
-  animation: fadeInAnimation ease 3s;
+#header_R {
+  opacity: 0;
+  animation: fadeInAnimation_circles ease 4s;
+  animation-delay: 1000ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
-@keyframes fadeInAnimation {
+#header_G {
+  opacity: 0;
+  animation: fadeInAnimation_circles ease 4s;
+  animation-delay: 500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#header_B {
+  opacity: 0;
+  animation: fadeInAnimation_circles ease 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation_circles {
   0% {
       opacity: 0;
   }
@@ -242,6 +259,23 @@ h3 {
   box-shadow: 0 0 50px 4px var(--R-clr);
 }
 
+#R_button {
+  background-color: var(--black-clr);
+  animation: fadeInAnimation_buttons_R ease 4s;
+  animation-delay: 1000ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation_buttons_R {
+  0% {
+    background-color: var(--black-clr);
+  }
+  100% {
+    background-color: var(--R-clr);
+   }
+}
+
 #G_button{
   background-color: var(--G-clr);
   border-color: var(--G-clr);
@@ -253,6 +287,23 @@ h3 {
 
 #G_button:hover {
   box-shadow: 0 0 50px 4px var(--G-clr);
+}
+
+#G_button {
+  background-color: var(--black-clr);
+  animation: fadeInAnimation_buttons_G ease 4s;
+  animation-delay: 500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation_buttons_G {
+  0% {
+    background-color: var(--black-clr);
+  }
+  100% {
+    background-color: var(--G-clr);
+   }
 }
 
 #B_button{
@@ -267,6 +318,22 @@ h3 {
 
 #B_button:hover {
   box-shadow: 0 0 50px 4px var(--B-clr);
+}
+
+#B_button {
+  background-color: var(--black-clr);
+  animation: fadeInAnimation_buttons_B ease 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation_buttons_B {
+  0% {
+    background-color: var(--black-clr);
+  }
+  100% {
+    background-color: var(--B-clr);
+   }
 }
 
 .grid {
