@@ -96,6 +96,26 @@ body {
   overflow: scroll;
 }
 
+body {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
+a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
 /* --- primitives --- */
 
 p {
@@ -169,28 +189,40 @@ h3 {
   height: 100vh;
   width: 10vh;
   justify-content: space-between;
-  align-items: center;
   z-index: 1;
   top: 0;
 }
 
-#sidenav_l {
-  left: 0vh;
+.sidenav_l {
+  left: 3vh;
+  align-items: flex-end
 }
 
-#sidenav_r {
-  right: 0vh;
+.sidenav_r {
+  right: 3vh;
+  align-items: flex-start
 }
 
 .sidenav .article_button {
   display: block;
+  overflow: hidden;
+  color: var(--white-clr);
   height: 40px;
   width: 10px;
   border-radius: 3px;
   border-style: solid;
   border-color: var(--white-clr);
   background-color: var(--white-clr);
-  transition: background-color 0.4s ease, margin-bottom 1s ease;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease, margin-bottom 1s ease, width 1s ease, color 1.5s ease;
+}
+
+.sidenav .article_button p {
+  margin: 4px 16px 4px 0;
+}
+
+.sidenav.sidenav_l .article_button:hover {
+  width: 400px;
+  color: var(--black-clr);
 }
 
 .in_a1 {
@@ -206,6 +238,10 @@ h3 {
   background-color: var(--black-clr);
 }
 
+#R_button:hover {
+  box-shadow: 0 0 50px 4px var(--R-clr);
+}
+
 #G_button{
   background-color: var(--G-clr);
   border-color: var(--G-clr);
@@ -213,6 +249,10 @@ h3 {
 
 #G_button.clicked {
   background-color: var(--black-clr);
+}
+
+#G_button:hover {
+  box-shadow: 0 0 50px 4px var(--G-clr);
 }
 
 #B_button{
@@ -225,11 +265,15 @@ h3 {
   background-color: var(--black-clr);
 }
 
+#B_button:hover {
+  box-shadow: 0 0 50px 4px var(--B-clr);
+}
+
 .grid {
   display: grid;
   align-items: stretch;
-  justify-items: center;
-  margin: 7vh 5vw 0 5vw;
+  justify-items: start;
+  margin: 14vh 5vw 0 5vw;
   column-gap: 5vw;
   width: auto;
   grid-template-columns: 40% 60%;
@@ -258,8 +302,6 @@ h3 {
 .a_header {
   margin-top: 80vh;
   padding-top: 10vh;
-  transition: opacity 2s ease;
-  opacity: 0;
 }
 
 .a_header.active {
@@ -291,19 +333,9 @@ h3 {
   grid-area: R;
 }
 
-/* @keyframes pop_in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-} */
-
 .img_circle {
   max-width: none;
   width: 50vw;
-  /* transition: 10s ease-out 10s 10 pop_in; */
 }
 
 .add_capction {
@@ -360,22 +392,18 @@ h3 {
 
 #rec_R {
   background-color: var(--R-clr);
-  margin-left: 5vw;
 }
 
 #rec_R_B {
   background-color: rgb(60,0,0);
-  margin-left: 5vw;
 }
 
 #rec_B {
   background-color: var(--B-clr);
-  /* margin-left: 5vw; */
 }  
 
 #rec_B2 {
   background-color: var(--B-clr);
-  /* margin-left: 5vw; */
 }
 
 #rec_gradient_R {
