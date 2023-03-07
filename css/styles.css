@@ -246,23 +246,15 @@ h3 {
   margin-bottom: auto;
 }
 
-#R_button{
-  background-color: var(--R-clr);
-  border-color: var(--R-clr);
-}
-
-#R_button.clicked {
-  background-color: var(--black-clr);
-}
-
 #R_button:hover {
   box-shadow: 0 0 50px 4px var(--R-clr);
 }
 
 #R_button {
   background-color: var(--black-clr);
-  animation: fadeInAnimation_buttons_R ease 4s;
-  animation-delay: 1000ms;
+  border-color: var(--R-clr);
+  animation: fadeInAnimation_buttons_R ease 0.4s;
+  /* animation-delay: 1000ms; */
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -276,14 +268,21 @@ h3 {
    }
 }
 
-#G_button{
-  background-color: var(--G-clr);
-  border-color: var(--G-clr);
+#R_button.clicked {
+  animation: fadeOutAnimation_buttons_R ease 0.4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
-#G_button.clicked {
-  background-color: var(--black-clr);
+@keyframes fadeOutAnimation_buttons_R {
+  0% {
+    background-color: var(--R-clr);
+  }
+  100% {
+    background-color: var(--black-clr);
+   }
 }
+
 
 #G_button:hover {
   box-shadow: 0 0 50px 4px var(--G-clr);
@@ -291,6 +290,7 @@ h3 {
 
 #G_button {
   background-color: var(--black-clr);
+  border-color: var(--G-clr);
   animation: fadeInAnimation_buttons_G ease 4s;
   animation-delay: 500ms;
   animation-iteration-count: 1;
@@ -303,13 +303,22 @@ h3 {
   }
   100% {
     background-color: var(--G-clr);
-   }
+  }
 }
 
-#B_button{
+#G_button.clicked {
+  animation: fadeOutAnimation_buttons_G ease 0.4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
 
-  background-color: var(--B-clr);
-  border-color: var(--B-clr);
+@keyframes fadeOutAnimation_buttons_G {
+  0% {
+    background-color: var(--G-clr);
+  }
+  100% {
+    background-color: var(--black-clr);
+   }
 }
 
 #B_button.clicked {
@@ -322,7 +331,8 @@ h3 {
 
 #B_button {
   background-color: var(--black-clr);
-  animation: fadeInAnimation_buttons_B ease 4s;
+  border-color: var(--B-clr);
+  animation: fadeInAnimation_buttons_B ease 0.44s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -333,6 +343,21 @@ h3 {
   }
   100% {
     background-color: var(--B-clr);
+   }
+}
+
+#B_button.clicked {
+  animation: fadeOutAnimation_buttons_B ease 0.4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutAnimation_buttons_B {
+  0% {
+    background-color: var(--B-clr);
+  }
+  100% {
+    background-color: var(--black-clr);
    }
 }
 
