@@ -291,8 +291,8 @@ h3 {
 #G_button {
   background-color: var(--black-clr);
   border-color: var(--G-clr);
-  animation: fadeInAnimation_buttons_G ease 4s;
-  animation-delay: 500ms;
+  animation: fadeInAnimation_buttons_G ease 0.4s;
+  /* animation-delay: 500ms; */
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
